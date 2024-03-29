@@ -1,29 +1,17 @@
 .application__header {
-  padding: 26px 0 17px;
+  padding: 28px 0 17px;
 
   @media (min-width: $tablet-width) {
-    padding: 38px 0 44px;
+    padding: 63px 40px 44px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 50px 0 44px;
-  }
-}
-
-.application__container {
-  padding: 0 20px;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
+    padding: 43px 0 66px;
   }
 }
 
 .application__title {
-  margin: 0 0 35px;
+  margin: 0 0 37px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;

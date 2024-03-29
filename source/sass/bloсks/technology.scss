@@ -1,5 +1,5 @@
 .technology {
-  padding: 22px 0 49px;
+  padding: 23px 0 51px;
 
   @media (min-width: $tablet-width) {
     padding: 45px 0 38px;
@@ -8,19 +8,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 72px 109px 64px;
+    padding: 72px 0 64px;
     border: none;
   }
 }
 
-.technology__container {
-  @media (min-width: $desktop-width) {
-    padding: 0;
-  }
-}
-
 .technology__title {
-  margin-bottom: 37px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
 }
 
 .technology__list {

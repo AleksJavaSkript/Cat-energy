@@ -5,13 +5,19 @@
 
 .form__group-wrapper {
   display: grid;
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px 70px;
+  }
 
   @media (min-width: $desktop-width) {
     // max-width: 570px;
     gap: 80px;
     grid-template-columns: repeat(2, 1fr);
     max-width: 1220px;
-    margin: 0 auto 54px;
+    margin: 0 auto 55px;
+    padding: 0;
   }
 }
 
@@ -30,11 +36,11 @@
   padding: 22px 20px 9px;
 
   @media (min-width: $tablet-width) {
-    padding: 21px 70px 20px;
+    padding: 21px 0 55px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 21px 0;
+    padding: 0;
   }
 }
 
@@ -129,52 +135,43 @@
 //   border: 2px solid #ff8282;
 // }
 .form__group--radio {
-  padding: 23px 20px 45px;
+  padding: 23px 20px 19px;
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    padding: 54px 70px 25px;
+    margin: 0 auto;
+    padding: 20px 26px 25px;
 
-    border: none;
+    border: 1px solid #e7e7e7;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 21px 0;
+    padding: 23px 28px;
   }
 }
 
 .form__group--contacts {
-  padding: 33px 20px 25px 40px;
+  padding: 44px 20px 13px;
 
   @media (min-width: $tablet-width) {
-    padding: 71px 70px 70px;
+    padding: 70px 70px 50px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 72px 110px 75px;
+    padding: 72px 110px 53px;
   }
 }
 
-.form__group--contacts .form__title {
-  z-index: 1;
-  background-color: #ffffff;
-  // top: 25px;
-  // margin-left: 20px;
-  padding: 0;
-  padding-right: 25px;
+.form__group--lines {
+  border-top: 2px solid #68b738;
 }
-// .form__group--lines {
-//   border-top: 2px solid #68b738;
-// }
 
 .form__title {
   position: relative;
-  // margin: 0 -20px;
-  margin: 0;
-
-  // margin-left: -20px;
+  top: 9px;
+  margin-left: -20px;
   padding: 0 20px;
 
   font-size: 24px;
@@ -185,7 +182,7 @@
   @media (min-width: $tablet-width) {
     top: -4px;
 
-    margin: 0 -40px;
+    margin-left: -40px;
     padding: 0 40px;
     font-size: 36px;
 
@@ -196,18 +193,6 @@
     }
   }
 }
-
-.form__fieldset--contacts .form__title {
-  @media (min-width: $tablet-width) {
-    position: relative;
-    top: 9px;
-  }
-}
-
-// .form__input-container {
-//   display: block;
-//   width: 100%;
-// }
 
 .form__input-container {
   position: relative;
@@ -251,32 +236,24 @@
 }
 
 .form__group--comments {
-  padding: 37px 0 40px 20px;
+  padding: 35px 20px 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 132px;
+    padding: 82px 70px 65px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 125px;
+    padding: 73px 110px 70px;
   }
 }
 
 .form__group--comments .form__title {
-  // top: 5px;
-
-  @media (min-width: $tablet-width) {
-    top: 46px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 50px;
-  }
+  top: -3px;
 }
 
 textarea.form__input {
   height: 150px;
-  padding: 14px 34px;
+  padding: 14px;
 
   resize: none;
 
@@ -287,29 +264,23 @@ textarea.form__input {
 }
 
 .form__group--check {
-  padding: 34px 0px 19px;
+  padding: 32px 20px 19px;
+  border-top: 2px solid #68b738;
 
   @media (min-width: $tablet-width) {
-    padding-top: 100px;
+    padding: 53px 70px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 105px;
+    padding: 53px 110px 61px;
   }
-
-  .form__title {
-    @media (min-width: $tablet-width) {
-      top: 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 47px;
-    }
-  }
+}
+.form__group--check .form__title {
+  top: -3px;
 }
 
 .form__order {
-  padding: 30px 0px 32px;
+  padding: 15px 20px 18px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -317,21 +288,23 @@ textarea.form__input {
     column-gap: 60px;
 
     grid-template-columns: repeat(2, 1fr);
+    padding: 0 70px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 0px 32px;
+    padding: 0px 110px 79px;
+    column-gap: 80px;
   }
 }
 
 .form__button {
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 26px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {

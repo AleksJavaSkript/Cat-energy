@@ -2,7 +2,7 @@
   position: relative;
 
   @media (min-width: $desktop-width) {
-    padding: 100px 95px 0 106px;
+    padding: 95px 0 106px;
     min-height: 400px;
   }
 
@@ -13,16 +13,12 @@
 
 .map__contact {
   display: grid;
-  padding: 26px 20px;
+  padding: 26px 0;
 
   grid-template-columns: repeat(2, 1fr);
 
-  &--form {
-    padding-top: 10px;
-  }
-
   @media (min-width: $tablet-width) {
-    padding: 62px 70px 60px;
+    padding: 62px 39px 60px;
 
     gap: 10px 250px;
   }
@@ -32,17 +28,12 @@
     z-index: 1;
 
     width: 565px;
-    padding: 55px 78px 59px 82px;
+    padding: 60px 80px 59px;
 
     background-color: #ffffff;
 
     gap: 10px 90px;
   }
-}
-
-.map__container {
-  padding: 0;
-  margin: 0;
 }
 
 .map__title {

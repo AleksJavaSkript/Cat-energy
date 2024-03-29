@@ -93,6 +93,7 @@
 
   @media (min-width: $tablet-width) {
     position: static;
+    margin-right: 5px;
 
     display: flex;
     flex-direction: row;
@@ -102,6 +103,10 @@
     background-color: transparent;
 
     gap: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 

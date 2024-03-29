@@ -5,7 +5,6 @@
 
   @media (min-width: $desktop-width) {
     align-items: start;
-    padding-bottom: 160px;
 
     grid-template-columns: auto 1fr;
   }
@@ -13,7 +12,7 @@
 
 // div
 .promo__description {
-  padding: 25px 0 164px;
+  padding: 27px 0 164px;
 
   text-align: center;
   color: #ffffff;
@@ -43,7 +42,7 @@
 
   @media (min-width: $desktop-width) {
     width: 545px;
-    padding: 110px 20px 27px 70px;
+    padding: 110px 20px 27px 80px;
   }
 }
 
@@ -51,10 +50,6 @@
   margin-bottom: 25px;
 
   color: inherit;
-
-  @media (max-width: 767px) {
-    line-height: 36px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
@@ -83,6 +78,7 @@
 
 .promo__button {
   width: 100%;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     z-index: 2;
@@ -96,7 +92,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 70px;
+    margin-left: 80px;
   }
 }
 
@@ -110,7 +106,7 @@
     width: 100%;
     max-width: 709px;
     height: 609px;
-    margin: -85px auto 0;
+    margin: -105px auto 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -119,7 +115,8 @@
     order: unset;
     width: 552px;
     height: 499px;
-    margin: 3px 0 0 -98px;
+    margin-left: -88px;
+    margin-top: 0;
 
     grid-column: -2 / -1;
     grid-row: 1 / 4;

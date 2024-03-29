@@ -7,6 +7,10 @@
 
   gap: 12px;
   grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+  }
 }
 
 .control__item {
@@ -28,6 +32,10 @@
 
 .control__label {
   padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
 }
 
 .control__input {
@@ -77,51 +85,29 @@
       height: 18px;
     }
   }
-
-  // @media (min-width: $desktop-width) {
-  //   margin-right: 20px;
-  //   width: 40px;
-  //   height: 40px;
-  // }
 }
 
 .control--check {
   display: grid;
 
   @media (min-width: $tablet-width) {
-    // column-gap: 60px;
-    // row-gap: 32px;
-    gap: 60px 32px;
+    gap: 32px 60px;
 
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 90px;
+    column-gap: 80px;
 
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .control__input--check {
-  width: 30px;
-  height: 30px;
-
   &:checked {
     background-image: url("../../img/svg/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px 26px;
   }
-
-  @media (min-width: $tablet-width) {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-  }
-
-  // @media (min-width: $desktop-width) {
-  //   width: 40px;
-  //   height: 40px;
-  // }
 }
