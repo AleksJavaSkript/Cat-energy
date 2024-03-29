@@ -112,12 +112,23 @@
     margin: -112px auto 13px;
   }
 
-  &:focus:not(:focus-visible) {
-    outline: none;
+  &:hover {
+    opacity: 0.6;
   }
 
   &:focus-visible {
-    outline: 3px solid #5eaa2f;
+    opacity: 0.6;
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -135,12 +146,23 @@
     text-align: center;
   }
 
-  &:focus:not(:focus-visible) {
-    outline: none;
+  &:hover {
+    opacity: 0.6;
   }
 
   &:focus-visible {
-    outline: 3px solid #5eaa2f;
+    opacity: 0.6;
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -276,13 +298,5 @@
 
   @media (min-width: $tablet-width) {
     padding: 10px 20px;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid #5eaa2f;
   }
 }

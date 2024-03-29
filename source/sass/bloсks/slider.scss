@@ -73,17 +73,19 @@
   fill: currentColor;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: #68b738;
   }
 
-  &:focus:not(:focus-visible) {
+  &:focus-visible {
+    color: #68b738;
+
     outline: none;
   }
-
-  &:focus-visible {
-    outline: 3px solid #5eaa2f;
+  @supports not selector(:focus-visible) {
+    &:focus {
+      color: #68b738;
+    }
   }
 
   &:active {

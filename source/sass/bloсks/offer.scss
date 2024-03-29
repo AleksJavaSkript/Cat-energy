@@ -154,16 +154,17 @@
     background-size: 32px 10px;
   }
 
-  &:focus {
+  &:focus-visible {
+    opacity: 0.3;
     background-size: 32px 10px;
-  }
 
-  &:focus:not(:focus-visible) {
     outline: none;
   }
-
-  &:focus-visible {
-    outline: 3px solid #5eaa2f;
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.3;
+      background-size: 32px 10px;
+    }
   }
 
   &:active {

@@ -27,12 +27,15 @@
     fill: #68b738;
   }
 
-  &:focus:not(:focus-visible) {
+  &:focus-visible {
+    fill: #68b738;
+
     outline: none;
   }
-
-  &:focus-visible {
-    outline: 3px solid #5eaa2f;
+  @supports not selector(:focus-visible) {
+    &:focus {
+      fill: #68b738;
+    }
   }
 
   &:active {

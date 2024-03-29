@@ -25,16 +25,19 @@
     }
   }
 
-  &:focus:not(:focus-visible) {
-    outline: none;
+  &:hover {
+    opacity: 80%;
   }
 
   &:focus-visible {
-    outline: 3px solid #5eaa2f;
-  }
-
-  &:hover {
     opacity: 80%;
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 80%;
+      outline: none;
+    }
   }
 
   &:active {
@@ -92,10 +95,6 @@
 
   &:focus:not(:focus-visible) {
     outline: none;
-  }
-
-  &:focus-visible {
-    outline: 3px solid #5eaa2f;
   }
 
   &:active {

@@ -113,27 +113,28 @@
     border-color: #cdcdcd;
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: #444444;
     outline: none;
     box-shadow: 0 0 0 2px #444444;
   }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
+  @supports not selector(:focus-visible) {
+    &:focus {
+      border-color: #444444;
+      outline: none;
+      box-shadow: 0 0 0 2px #444444;
+    }
   }
 
-  &:focus-visible {
-    outline: 3px solid #5eaa2f;
+  &:disabled {
+    border-color: #ff8282;
   }
 }
 
 // .form__input--error:disabled {
 //   border-color: #ff8282;
 // }
-// .form__input:invalid {
-//   border: 2px solid #ff8282;
-// }
+
 .form__group--radio {
   padding: 23px 20px 19px;
 
