@@ -7,6 +7,10 @@
 
   gap: 12px;
   grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    gap: 13px;
+  }
 }
 
 .control__item {
@@ -15,11 +19,24 @@
   min-height: 30px;
 
   grid-template-columns: auto 1fr;
+
+  &:hover,
+  &:focus {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
-// .control__label {
-//   padding-left: 15px;
-// }
+.control__label {
+  padding-left: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
+}
 
 .control__input {
   position: relative;
@@ -32,11 +49,37 @@
   border: 1px solid #cdcdcd;
 
   appearance: none;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  // &:hover {
+  //   opacity: 0.6;
+  // }
+
+  &:focus-visible {
+    opacity: 0.6;
+
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .control__input--radio {
-  margin-right: 15px;
-
   border-radius: 50%;
 
   &:checked::after {
@@ -58,10 +101,27 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    margin-right: 20px;
-    width: 40px;
-    height: 40px;
+  // &:hover {
+  //   opacity: 0.6;
+  // }
+
+  &:focus-visible {
+    opacity: 0.6;
+
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
@@ -69,38 +129,23 @@
   display: grid;
 
   @media (min-width: $tablet-width) {
-    column-gap: 60px;
-    row-gap: 32px;
+    gap: 32px 60px;
 
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 90px;
+    column-gap: 80px;
 
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .control__input--check {
-  width: 30px;
-  height: 30px;
-
   &:checked {
     background-image: url("../../img/svg/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 26px 26px;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 40px;
-    height: 40px;
   }
 }

@@ -11,12 +11,13 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 
 import postUrl from 'postcss-url';
 
-export const styles = () => {
+const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
@@ -32,15 +33,18 @@ export const styles = () => {
 
 // HTML
 
+
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -69,15 +73,14 @@ const createWebp = () => {
 }
 
 // SVG
-
-const svg = () =>
+export const svg = () =>
   gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-const sprite = () => {
+export const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-    .pipe(svgo())
+    .pipe(svgo({ output: `sprite` }))
     .pipe(svgstore({
       inlineSvg: true
     }))

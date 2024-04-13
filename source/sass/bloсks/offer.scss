@@ -1,13 +1,6 @@
-.offer__container {
-  padding-top: 20px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 0;
-  }
-
+.offer {
   @media (min-width: $desktop-width) {
-    padding: 0;
-    // margin: 0;
+    padding-top: 82px;
   }
 }
 
@@ -35,13 +28,13 @@
 .offer__item {
   position: relative;
 
-  padding: 30px 33px 18px 20px;
+  padding: 30px 33px 21px 20px;
 
   background-color: #f2f2f2;
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 330px 53px 52px;
+    padding: 77px 330px 58px 52px;
   }
 
   &--slim {
@@ -55,25 +48,26 @@
     }
 
     @media (min-width: $desktop-width) {
-      background-position: 52px 42px;
+      background-position: 52px 41px;
       background-size: 100px 106px;
       padding-right: 61px;
+      padding-left: 52px;
     }
   }
 
   &--pro {
     background-image: url("../../img/svg/cat-pro.svg");
     background-position: 12px 24px;
-    background-size: 67px 50px;
+    background-size: 67px 52px;
 
     @media (min-width: $tablet-width) {
-      background-position: top 91px right 31px;
+      background-position: top 90px right 26px;
       background-size: 268px 200px;
       padding-right: 320px;
     }
 
     @media (min-width: $desktop-width) {
-      background-position: 34px 47px;
+      background-position: 36px 47px;
       background-size: 134px 100px;
       padding-right: 67px;
     }
@@ -106,7 +100,7 @@
 
 .offer__text {
   margin: 0 0 16px;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
 
   font-size: 14px;
   line-height: 18px;
@@ -115,7 +109,7 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     padding: 0;
 
     font-weight: 400;
@@ -133,8 +127,8 @@
 
 .offer__link {
   display: block;
-  width: 100%;
-
+  width: fit-content;
+  padding-right: 70px;
   font-size: 16px;
   line-height: 16px;
   font-family: $ff-oswald;
@@ -144,7 +138,7 @@
 
   background-image: url("../../img/svg/icon-arrow.svg");
   background-repeat: no-repeat;
-  background-position: 104px;
+  background-position: 100px;
   background-size: 25px 10px;
   cursor: pointer;
 
@@ -152,12 +146,25 @@
     font-size: 20px;
     line-height: 30px;
 
-    background-size: 26px 10px;
+    background-size: 32px 10px;
     background-position: 129px;
   }
 
   &:hover {
-    color: #000000;
+    background-size: 32px 10px;
+  }
+
+  &:focus-visible {
+    opacity: 0.3;
+    background-size: 32px 10px;
+
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.3;
+      background-size: 32px 10px;
+    }
   }
 
   &:active {

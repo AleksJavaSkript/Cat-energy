@@ -12,6 +12,7 @@
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
+    align-items: self-start;
 
     gap: 24px;
   }
@@ -24,6 +25,17 @@
   &:hover,
   &:focus {
     fill: #68b738;
+  }
+
+  &:focus-visible {
+    fill: #68b738;
+
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      fill: #68b738;
+    }
   }
 
   &:active {

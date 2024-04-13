@@ -72,6 +72,25 @@
   border-radius: 2px;
   fill: currentColor;
   cursor: pointer;
+
+  &:hover {
+    color: #68b738;
+  }
+
+  &:focus-visible {
+    color: #68b738;
+
+    outline: none;
+  }
+  @supports not selector(:focus-visible) {
+    &:focus {
+      color: #68b738;
+    }
+  }
+
+  &:active {
+    color: #5eaa2f;
+  }
 }
 
 .slider__button-decoration {
