@@ -65,14 +65,16 @@
   display: block;
   width: 101px;
   height: 18px;
-
+  fill: #111111;
   @media (min-width: $desktop-width) {
     width: 118px;
     height: 21px;
+    fill: #444444;
   }
 }
 
 .logo--footer .logo__cat-text {
+  fill: #111111;
   @media (min-width: $tablet-width) {
     margin-left: 0;
   }
