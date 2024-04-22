@@ -124,3 +124,15 @@
 .nav--open .nav__list {
   display: flex;
 }
+
+.nav--home a {
+  @media (min-width: $desktop-width) {
+    color: #ffffff;
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      background-color: #ffffff;
+    }
+  }
+}

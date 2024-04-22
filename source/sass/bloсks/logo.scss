@@ -66,22 +66,21 @@
   width: 101px;
   height: 18px;
   fill: #111111;
+  @media (min-width: $tablet-width) {
+    fill: #444444;
+  }
+
   @media (min-width: $desktop-width) {
     width: 118px;
     height: 21px;
-    fill: #444444;
   }
 }
-
-.logo--footer .logo__cat-text {
-  fill: #111111;
+// ссылка
+.logo--footer {
+  color: #111111;
   @media (min-width: $tablet-width) {
     margin-left: 0;
   }
-}
-
-.logo--footer {
-  object-fit: cover;
 
   &:hover {
     color: #3e3e3e;
@@ -89,14 +88,20 @@
     --color-logo-text: #3e3e3e;
   }
 
-  &:focus {
+  &:focus-visible {
     color: #3e3e3e;
 
     --color-logo-text: #3e3e3e;
   }
 
-  &:focus:not(:focus-visible) {
-    outline: none;
+  @supports not selector(:focus-visible) {
+    &:focus {
+      color: #3e3e3e;
+
+      outline: none;
+
+      --color-logo-text: #3e3e3e;
+    }
   }
 
   &:active {
@@ -106,17 +111,11 @@
   }
 }
 
-.logo--footer img {
+.logo__cat-footer {
   width: 128px;
   height: 24px;
-
-  object-fit: contain;
-}
-
-.logo__cat-footer {
   @media (min-width: $tablet-width) {
-    width: 128px;
-    height: 24px;
     margin: 0;
+    fill: #111111;
   }
 }

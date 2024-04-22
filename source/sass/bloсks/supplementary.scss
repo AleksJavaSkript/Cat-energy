@@ -29,11 +29,6 @@
     line-height: 36px;
   }
 
-  // ЗАЧЕМ ДВАЖДЫ ДЕЛАТЬ ОДИНАКОВЫЙ МЕДИА ЗАПРОС ?
-  // @media (min-width: $desktop-width) {
-  //   margin: 0 -20px 72px;
-  //   padding-left: 20px;
-  // }
   @media (min-width: 1440px) {
     margin: 0 -8% 72px;
     padding-left: 8%;
