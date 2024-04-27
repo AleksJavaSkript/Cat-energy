@@ -8,14 +8,17 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    padding-top: 60px;
+    padding-top: 57px;
+
     padding-bottom: 55px;
+    align-items: center;
+
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 69px;
+    padding-bottom: 66px;
   }
 }
 

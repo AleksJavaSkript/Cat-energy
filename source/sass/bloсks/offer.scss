@@ -126,48 +126,67 @@
 }
 
 .offer__link {
-  display: block;
+  position: relative;
+
+  display: flex;
   width: fit-content;
-  padding-right: 70px;
+  padding-right: 48px;
+
   font-size: 16px;
   line-height: 16px;
   font-family: $ff-oswald;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
-
-  background-image: url("../../img/svg/icon-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 100px;
-  background-size: 25px 10px;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-
-    background-size: 32px 10px;
-    background-position: 129px;
+    padding-right: 58px;
   }
 
   &:hover {
-    background-size: 32px 10px;
+    &::after {
+      width: 32px;
+    }
   }
 
   &:focus-visible {
-    opacity: 0.3;
-    background-size: 32px 10px;
-
     outline: none;
+
+    &::after {
+      width: 32px;
+    }
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
-      opacity: 0.3;
-      background-size: 32px 10px;
+      &::after {
+        width: 32px;
+      }
     }
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: calc(100% - 32px);
+    transform: translateY(-50%);
+
+    width: 24px;
+    height: 12px;
+
+    background-image: url("../../img/svg/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 32px 12px;
+
+    transition: width 0.5s;
   }
 }

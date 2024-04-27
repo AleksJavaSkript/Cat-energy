@@ -29,9 +29,13 @@
     line-height: 36px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin: 0 -20px 73px;
+  }
+
   @media (min-width: 1440px) {
     margin: 0 -8% 72px;
-    padding-left: 8%;
+    padding-left: 5%;
   }
 
   &--lines span {
@@ -40,11 +44,11 @@
     width: fit-content;
     padding: 0 20px 5px;
     @media (min-width: $tablet-width) {
-      padding: 0 35px 5px;
+      padding: 0 40px 5px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-left: -33px;
+      padding: 0 36px 5px;
     }
   }
 
@@ -109,29 +113,35 @@
 .supplementary__item {
   display: grid;
   justify-content: space-between;
+  align-items: baseline;
+
   padding: 12px 0 19px;
   grid-template-columns: auto auto;
   gap: 11px 20px;
-  align-items: center;
   border-top: 1px solid #cdcdcd;
+
   &:last-child {
     border-bottom: 1px solid #cdcdcd;
   }
-  @media (min-width: $tablet-width) {
-    padding: 26px 38px 28px;
 
-    border-top: 1px solid #cdcdcd;
+  @media (min-width: $tablet-width) {
+    padding: 24px 38px 29px;
+
+    border: 1px solid #cdcdcd;
+    border-bottom: none;
 
     grid-template-columns: 1fr 150px 70px;
-    gap: 24px 20px;
+    gap: 22px 20px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0;
+    padding: 17px 0 13px;
 
-    column-gap: 40px;
+    gap: 18px 23px;
 
     grid-template-columns: 1fr 220px 60px 244px;
+    border: none;
+    border-top: 1px solid #cdcdcd;
   }
 }
 
@@ -167,8 +177,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    justify-self: start;
-    margin-left: 35px;
+    text-align: left;
   }
 }
 
@@ -178,14 +187,14 @@
   font-size: 14px;
   line-height: 20px;
 
-  justify-self: end;
+  text-align: right;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0;
+    text-align: left;
   }
 }
 
@@ -222,8 +231,8 @@
   @media (min-width: $tablet-width) {
     position: relative;
     min-height: 200px;
-    padding: 56px 20px 52px 60%;
-    margin-top: 70px;
+    padding: 69px 20px 52px 60%;
+    margin-top: 68px;
 
     text-align: left;
     background-image: url("../../img/svg/icon-box.svg"),
@@ -239,7 +248,7 @@
   @media (min-width: $desktop-width) {
     width: 245px;
     min-height: 288px;
-    padding: 172px 20px 26px;
+    padding: 187px 20px 26px;
     margin: 0;
 
     text-align: center;

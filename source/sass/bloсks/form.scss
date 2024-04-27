@@ -12,9 +12,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    // max-width: 570px;
     gap: 80px;
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
     max-width: 1220px;
     margin: 0 auto 55px;
     padding: 0;
@@ -116,13 +117,13 @@
   &:focus-visible {
     border-color: #444444;
     outline: none;
-    box-shadow: 0 0 0 2px #444444;
+    box-shadow: 0 0 0 1px #444444;
   }
   @supports not selector(:focus-visible) {
     &:focus {
       border-color: #444444;
       outline: none;
-      box-shadow: 0 0 0 2px #444444;
+      box-shadow: 0 0 0 1px #444444;
     }
   }
 
@@ -131,9 +132,10 @@
   }
 }
 
-// .form__input--error:disabled {
-//   border-color: #ff8282;
-// }
+.form__input--error {
+  border-color: #ff8282;
+  box-shadow: 0 0 0 1px #ff8282;
+}
 
 .form__group--radio {
   padding: 23px 20px 19px;
@@ -154,7 +156,7 @@
 }
 
 .form__group--contacts {
-  padding: 44px 20px 13px;
+  padding: 44px 20px 11px;
 
   @media (min-width: $tablet-width) {
     padding: 70px 70px 50px;
@@ -171,8 +173,7 @@
 
 .form__title {
   position: relative;
-  top: 9px;
-  margin-left: -20px;
+  margin: 0 -20px;
   padding: 0 20px;
 
   font-size: 24px;
@@ -182,16 +183,19 @@
 
   @media (min-width: $tablet-width) {
     top: -4px;
-
-    margin-left: -40px;
+    margin: 0 -40px;
     padding: 0 40px;
     font-size: 36px;
 
     line-height: 36px;
+  }
+}
 
-    br {
-      display: none;
-    }
+.form__group--contacts .form__title {
+  @media (max-width: 767px) {
+    position: relative;
+    top: 9px;
+    max-width: 222px;
   }
 }
 
@@ -237,7 +241,7 @@
 }
 
 .form__group--comments {
-  padding: 35px 20px 20px;
+  padding: 35px 20px 22px;
 
   @media (min-width: $tablet-width) {
     padding: 82px 70px 65px;
@@ -246,10 +250,6 @@
   @media (min-width: $desktop-width) {
     padding: 73px 110px 70px;
   }
-}
-
-.form__group--comments .form__title {
-  top: -3px;
 }
 
 textarea.form__input {
