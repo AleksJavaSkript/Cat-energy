@@ -118,6 +118,12 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    position: absolute;
+    justify-content: flex-start;
+    row-gap: 0;
+
+    top: 28px;
+    left: 763px;
   }
 }
 
