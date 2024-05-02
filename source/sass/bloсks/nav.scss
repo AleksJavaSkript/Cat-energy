@@ -25,6 +25,7 @@
     opacity: 0.6;
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       opacity: 0.3;
@@ -144,15 +145,15 @@
 }
 
 // Открывает меню при не работающем js
-// .no-js .nav__list {
-//   position: static;
-//   display: flex;
+.no-js .nav__list {
+  position: static;
+  display: flex;
 
-//   @media (max-width: 767px) {
-//     margin: 10px -20px 0;
-//   }
-// }
+  @media (max-width: 767px) {
+    margin: 10px -20px 0;
+  }
+}
 
-// .no-js .nav__toggle {
-//   display: none;
-// }
+.no-js .nav__toggle {
+  display: none;
+}

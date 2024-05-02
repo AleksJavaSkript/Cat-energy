@@ -3,7 +3,6 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
-
     border-top: none;
   }
 }
@@ -37,7 +36,6 @@
   display: grid;
   margin: 0;
   padding: 0;
-
   list-style: none;
 
   @media (max-width: 767px) {
@@ -46,7 +44,6 @@
 
   @media (min-width: $tablet-width) {
     gap: 59px;
-
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -75,7 +72,6 @@
 
 .catalog__item-cover {
   display: grid;
-
   grid-template-columns: 140px 1fr;
   padding: 20px 20px 25px;
   min-height: 208px;
@@ -85,7 +81,6 @@
     flex-direction: column;
     height: 100%;
     padding: 60px 37px 40px;
-
     background-color: #f2f2f2;
   }
 
@@ -119,6 +114,7 @@
     opacity: 0.6;
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       opacity: 0.6;
@@ -157,6 +153,7 @@
     opacity: 0.6;
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       opacity: 0.6;
@@ -171,7 +168,6 @@
 
 .catalog__card-title {
   margin: 0;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -184,6 +180,7 @@
     line-height: 24px;
     max-width: 130px;
     margin: 0 auto;
+
     & br {
       display: none;
     }
@@ -232,7 +229,6 @@
   grid-template-columns: 1fr;
   align-content: start;
   padding-top: 77px;
-
   background-image: url("../../img/svg/plus.svg");
   background-repeat: no-repeat;
   background-position: top 23px center;
@@ -240,11 +236,9 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 160px;
-
     background-color: #ffffff;
     background-position: top 50px center;
     background-size: 60px 60px;
-
     border: 2px solid #f2f2f2;
   }
 
@@ -261,14 +255,12 @@
 
 .catalog__item--more .catalog__card-title {
   margin-bottom: 8px;
-
   text-align: center;
   color: #111111;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
     margin-bottom: 22px;
-
     max-width: 140px;
   }
 
@@ -279,7 +271,6 @@
 
 .catalog__item--more .catalog__text {
   margin: 0 0 20px;
-
   text-align: center;
   font-size: 12px;
   line-height: 16px;
@@ -296,7 +287,6 @@
   display: grid;
   width: 100%;
   margin-top: auto;
-
   grid-column: 1/-1;
 
   @media (min-width: $tablet-width) {

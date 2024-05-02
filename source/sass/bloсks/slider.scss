@@ -82,6 +82,7 @@
 
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       color: #68b738;

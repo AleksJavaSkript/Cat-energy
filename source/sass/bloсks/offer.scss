@@ -162,9 +162,11 @@
 
   @supports not selector(:focus-visible) {
     &:focus {
-      &::after {
-        width: 32px;
-      }
+      outline: none;
+    }
+
+    &:focus::after {
+      width: 32px;
     }
   }
 

@@ -55,14 +55,19 @@
     height: 40px;
   }
 
-  &:focus-visible {
-    opacity: 0.6;
+  &:hover {
+    border-color: #bababa;
+  }
 
+  &:focus-visible {
+    border-color: #bababa;
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
-      opacity: 0.6;
+      border-color: #bababa;
+      outline: none;
     }
   }
 
@@ -72,6 +77,14 @@
 
   &:disabled {
     opacity: 0.3;
+
+    pointer-events: none;
+
+    & + .control__label {
+      opacity: 0.3;
+
+      pointer-events: none;
+    }
   }
 }
 
@@ -102,6 +115,7 @@
 
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       opacity: 0.6;

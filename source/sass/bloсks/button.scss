@@ -1,7 +1,6 @@
 .button {
   display: inline-block;
   padding: 10px;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -10,7 +9,6 @@
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-
   background-color: $button-color;
   border: none;
   cursor: pointer;
@@ -22,11 +20,12 @@
   &:hover {
     background-color: #5eaa2f;
   }
+
   &:focus-visible {
     background-color: #5eaa2f;
-
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       background-color: #5eaa2f;
@@ -35,14 +34,18 @@
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
-
     background-color: #5eaa2f;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: #e5e5e5;
+    pointer-events: none;
   }
 }
 
 .button--light {
   color: #444444;
-
   background-color: #f2f2f2;
 
   &:hover {
@@ -51,9 +54,9 @@
 
   &:focus-visible {
     background-color: #ebebeb;
-
     outline: none;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       background-color: #ebebeb;
@@ -62,14 +65,6 @@
 
   &:active {
     color: rgba(68, 68, 68, 0.3);
-
     background-color: #ebebeb;
-  }
-
-  &:disabled,
-  &--disabled {
-    background-color: #e5e5e5;
-
-    pointer-events: none;
   }
 }

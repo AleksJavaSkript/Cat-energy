@@ -119,6 +119,7 @@
     outline: none;
     box-shadow: 0 0 0 1px #444444;
   }
+
   @supports not selector(:focus-visible) {
     &:focus {
       border-color: #444444;
@@ -128,7 +129,8 @@
   }
 
   &:disabled {
-    border-color: #ff8282;
+    opacity: 0.3;
+    pointer-events: none;
   }
 }
 
@@ -276,6 +278,7 @@ textarea.form__input {
     padding: 53px 110px 61px;
   }
 }
+
 .form__group--check .form__title {
   top: -3px;
 }
@@ -293,7 +296,7 @@ textarea.form__input {
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0px 110px 79px;
+    padding: 0 110px 79px;
     column-gap: 80px;
   }
 }
@@ -310,7 +313,7 @@ textarea.form__input {
 
   @media (min-width: $desktop-width) {
     width: 570px;
-    // margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
